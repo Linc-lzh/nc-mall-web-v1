@@ -18,7 +18,7 @@ export function createProductAttrCate(data) {
 export function deleteProductAttrCate(id) {
   return request({
     url:'/productAttribute/category/delete/'+id,
-    method:'get'
+    method:'post'
   })
 }
 

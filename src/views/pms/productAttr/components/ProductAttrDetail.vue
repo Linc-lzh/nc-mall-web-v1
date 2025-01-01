@@ -5,7 +5,7 @@
         <el-input v-model="productAttr.name"></el-input>
       </el-form-item>
       <el-form-item label="商品类型：">
-        <el-select v-model="productAttr.productAttributeCategoryId" placeholder="请选择">
+        <el-select v-model="productAttr.productAttributeCategoryId" :disabled="isEdit" placeholder="请选择">
           <el-option
             v-for="item in productAttrCateList"
             :key="item.id"
@@ -158,6 +158,7 @@
                     duration: 1000
                   });
                   this.resetForm('productAttrFrom');
+                  this.$router.back();
                 });
               }
             });
