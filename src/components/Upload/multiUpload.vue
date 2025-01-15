@@ -1,7 +1,7 @@
 <template> 
   <div>
     <el-upload
-      :action="useOss?ossUploadUrl:minioUploadUrl"
+      :action="useOss?dataObj.host:minioUploadUrl"
       :data="useOss?dataObj:null"
       list-type="picture-card"
       :file-list="fileList"

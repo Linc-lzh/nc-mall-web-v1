@@ -603,6 +603,9 @@
         this.$emit('nextStep')
       },
       handleFinishCommit(){
+        debugger
+        this.mergeProductAttrValue();
+        this.mergeProductAttrPics();
         this.$emit('finishCommit',this.isEdit);
       }
     }
